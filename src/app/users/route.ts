@@ -13,7 +13,7 @@ export async function GET(req: NextRequest) {
   const qb = new QueryBuilder("SELECT * FROM learn.users");
 
   if (search) {
-    qb.search(["username", "email"], search);
+    qb.search(["fullname", "email"], search);
   }
 
   if (limit) {
